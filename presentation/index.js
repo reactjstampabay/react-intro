@@ -49,7 +49,11 @@ const images = {
   react: require('../assets/react-logo.png'),
   streetFighter: require('../assets/street-fighter-destroy-car.gif'),
   carReplaceTire: require('../assets/car-replace-tire-moving.jpg'),
-  tropicThunder: require('../assets/tropic-thunder-explosion.gif')
+  tropicThunder: require('../assets/tropic-thunder-explosion.gif'),
+  everyone: require('../assets/everyone.gif'),
+  reactInProduction: require('../assets/react-in-production.png'),
+  fluxPattern: require('../assets/react-flux-pattern.png'),
+  vdomExample: require('../assets/react-vdom-illustrated.png')
 };
 
 preloader(images);
@@ -105,25 +109,60 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              So, who uses React?
+            </Heading>
+            <Image src={images.everyone.replace("/", "")} width="700px" />
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image src={images.reactInProduction.replace("/", "")} width="700px" />
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              But Why?
+            </Heading>
+            <List>
+              <Appear><ListItem>A simple mental model</ListItem></Appear>
+              <Appear><ListItem>Fast by default</ListItem></Appear>
+              <Appear><ListItem>Architecture allows for easier future transitions</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
+            <Heading size={1} caps fit textColor="tertiary">
+              Simple means simple...
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/simple-react.example")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image src={images.vdomExample.replace("/", "")} height="500px" />
+            <Heading size={1} caps fit textColor="tertiary">
+              Dark magic demystified
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image src={images.fluxPattern.replace("/", "")} height="500px" />
+            <Heading size={1} caps fit textColor="tertiary">
+              Simplified UI flow
+            </Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]}>
             <Image src={images.tropicThunder.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
-              The old way of moving to a new framework...
+              Switching frameworks?
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Image src={images.carReplaceTire.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
-              The preferred way...
+              Would this be nicer?
             </Heading>
           </Slide>
 
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
-          </Slide>
           <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
