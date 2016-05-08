@@ -99,7 +99,7 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear fid="2">
               <Heading size={2} caps fit textColor="tertiary">
-                A thriving ecosystem
+                With a thriving ecosystem
               </Heading>
             </Appear>
             <Appear fid="3">
