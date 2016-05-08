@@ -40,13 +40,22 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  ember: require('../assets/ember-logo.png'),
+  meteor: require('../assets/meteor-logo.png'),
+  jquery: require('../assets/jquery-logo.png'),
+  angular: require('../assets/angular-logo.png'),
+  knockout: require('../assets/knockout-logo.png'),
+  react: require('../assets/react-logo.png'),
+  streetFighter: require('../assets/street-fighter-destroy-car.gif'),
+  carReplaceTire: require('../assets/car-replace-tire-moving.jpg'),
+  tropicThunder: require('../assets/tropic-thunder-explosion.gif')
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "#ff4081"
+  primary: "#61dafb"
 });
 
 export default class Presentation extends React.Component {
@@ -56,25 +65,58 @@ export default class Presentation extends React.Component {
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Spectacle
+              React
             </Heading>
             <Heading size={1} fit caps>
-              A ReactJS Presentation Library
-            </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
-            </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+              A Competitive Edge and a Business Decision
             </Heading>
           </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="black" notes="Quick ditty on how we got here from other frameworks">
+            <Image src={images.jquery.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.knockout.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.ember.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.meteor.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.angular.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Heading size={1} caps fit>
+              Great, another JavaScript framework...
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="black" notes="The V in MVC!">
+            <Image src={images.react.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Heading size={1} caps fit>
+              ...only, this is technically not a framework.
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Appear fid="1">
+              <Heading size={2} caps fit textColor="tertiary">
+                The "V" in MVC
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size={2} caps fit textColor="tertiary">
+                A thriving ecosystem
+              </Heading>
+            </Appear>
+            <Appear fid="3">
+              <Heading size={2} caps fit textColor="tertiary">
+                Opinionated towards modularity and portability
+              </Heading>
+            </Appear>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image src={images.tropicThunder.replace("/", "")} height="500px" />
+            <Heading size={1} caps fit textColor="tertiary">
+              The old way of moving to a new framework...
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image src={images.carReplaceTire.replace("/", "")} height="500px" />
+            <Heading size={1} caps fit textColor="tertiary">
+              The preferred way...
+            </Heading>
+          </Slide>
+
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
               lang="jsx"
