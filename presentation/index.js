@@ -53,7 +53,8 @@ const images = {
   everyone: require('../assets/everyone.gif'),
   reactInProduction: require('../assets/react-in-production.png'),
   fluxPattern: require('../assets/react-flux-pattern.png'),
-  vdomExample: require('../assets/react-vdom-illustrated.png')
+  vdomExample: require('../assets/react-vdom-illustrated.png'),
+  reactNativeAndroidIOS: require('../assets/react-native-android-ios.png')
 };
 
 preloader(images);
@@ -119,12 +120,13 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
-              But Why?
+              And why should I care?
             </Heading>
-            <List>
+            <List textColor="tertiary">
               <Appear><ListItem>A simple mental model</ListItem></Appear>
               <Appear><ListItem>Fast by default</ListItem></Appear>
               <Appear><ListItem>Architecture allows for easier future transitions</ListItem></Appear>
+              <Appear><ListItem>Truly cross-platform</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
@@ -144,23 +146,38 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Image src={images.fluxPattern.replace("/", "")} height="500px" />
-            <Heading size={1} caps fit textColor="tertiary">
-              Simplified UI flow
-            </Heading>
-          </Slide>
-
-          <Slide transition={["zoom", "fade"]}>
             <Image src={images.tropicThunder.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
-              Switching frameworks?
+              What we expect when switching frameworks...
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Image src={images.carReplaceTire.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
-              Would this be nicer?
+              ...but, wouldn't this be nicer?
             </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={2} caps fit textColor="tertiary">
+              Free your front-end architecture
+            </Heading>
+            <Image src={images.fluxPattern.replace("/", "")} height="500px" />
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={2} caps fit textColor="tertiary">
+              unleash it on all platforms
+            </Heading>
+            <Image bgColor="white" src={images.reactNativeAndroidIOS.replace("/", "")} height="500px" />
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]}>
+            <BlockQuote>
+              <Quote textColor="tertiary">
+                I’d say that we’ve found React Native to be at least 5x more productive than traditional mobile development.
+              </Quote>
+              <Cite><a href="http://tech.taskrabbit.com/blog/2016/03/24/react-native-android-launch/">Brian Leonard (Tasker)</a></Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
