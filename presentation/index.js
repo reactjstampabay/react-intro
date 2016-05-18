@@ -46,6 +46,9 @@ const images = {
   jquery: require('../assets/jquery-logo.png'),
   angular: require('../assets/angular-logo.png'),
   knockout: require('../assets/knockout-logo.png'),
+  durandal: require('../assets/durandal-logo.png'),
+  aurelia: require('../assets/aurelia-logo.png'),
+  backbone: require('../assets/backbone-logo.png'),
   react: require('../assets/react-logo.png'),
   streetFighter: require('../assets/street-fighter-destroy-car.gif'),
   carReplaceTire: require('../assets/car-replace-tire-moving.jpg'),
@@ -77,11 +80,14 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="black" notes="Quick ditty on how we got here from other frameworks">
-            <Image src={images.jquery.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.knockout.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.ember.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.meteor.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.angular.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.jquery.replace("/", "")} margin="0 auto 40px" width="300px" />
+            <Image src={images.knockout.replace("/", "")} margin="0 auto 40px" width="300px" />
+            <Image src={images.durandal.replace("/", "")} margin="0 auto 40px" width="300px" />
+            <Image src={images.backbone.replace("/", "")} margin="0 20px 40px" width="300px" />
+            <Image src={images.ember.replace("/", "")} margin="0 auto 40px" width="280px" />
+            <Image src={images.meteor.replace("/", "")} margin="0 auto 40px" width="300px" />
+            <Image src={images.angular.replace("/", "")} margin="0 20px 40px auto" width="300px" />
+            <Image src={images.aurelia.replace("/", "")} margin="0 auto 40px" width="300px" />
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
                 Great, another JavaScript framework...
