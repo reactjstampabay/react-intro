@@ -259,7 +259,24 @@ export default class Presentation extends React.Component {
                 I’d say that we’ve found React Native to be at least 5x more productive than traditional mobile development.
               </Quote>
               <Cite>Brian Leonard (Tasker)</Cite>
-              <Cite>http://tech.taskrabbit.com/blog/2016/03/24/react-native-android-launch</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="black">
+            <BlockQuote>
+              <Quote>
+                Steal shamelessly from React!
+              </Quote>
+              <Cite>Adam Ernst (Author of ComponentKit for iOS)</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="black">
+            <BlockQuote>
+              <Quote>
+                [...] our bet paid off — we were able to ship Facebook's first fully React Native app on two platforms, with native look and feel
+              </Quote>
+              <Cite>Daniel Witte & Philip von Weiterhausen (Facebook Ads Manager)</Cite>
             </BlockQuote>
           </Slide>
 
