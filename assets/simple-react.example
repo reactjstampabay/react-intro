@@ -1,6 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
-export default class SampleComponent extends Component {
+class SampleComponent extends Component {
+  // ES7+ style property initializer
+  static propTypes = {
+    message: PropTypes.string
+  }
   render() {
     return (
       <div className="hello-world">
@@ -9,3 +13,5 @@ export default class SampleComponent extends Component {
     );
   }
 }
+
+export default SampleComponent;
