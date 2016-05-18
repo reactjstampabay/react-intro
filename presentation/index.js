@@ -19,7 +19,8 @@ import {
   Quote,
   Slide,
   Spectacle,
-  Text
+  Text,
+  Table, TableRow, TableItem, TableHeaderItem
 } from "spectacle";
 
 // Import image preloader util
@@ -34,7 +35,7 @@ import Interactive from "../assets/interactive";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-
+require("../assets/presentation.css");
 
 const images = {
   city: require("../assets/city.jpg"),
@@ -76,18 +77,48 @@ export default class Presentation extends React.Component {
               A Competitive Edge and a Business Decision
             </Heading>
           </Slide>
+
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading fit caps lineHeight={1} textColor="white">
+              Your Starting Line Up
+            </Heading>
+
+            <Table>
+              <TableRow style={{textAlign: 'center'}}>
+                <TableHeaderItem style={{color: 'black'}}><i className="fa fa-user" aria-hidden="true"></i></TableHeaderItem>
+                <TableHeaderItem style={{color: 'black'}}><i className="fa fa-twitter" aria-hidden="true"></i></TableHeaderItem>
+                <TableHeaderItem style={{color: 'black'}}><i className="fa fa-github" aria-hidden="true"></i></TableHeaderItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>Eric Nograles</TableItem>
+                <TableItem>@grales</TableItem>
+                <TableItem>github.com/ericnograles</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>John Hampton</TableItem>
+                <TableItem>@johnrhampton</TableItem>
+                <TableItem>github.com/johnrhampton</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>Josh Burgess</TableItem>
+                <TableItem>@_joshburgess </TableItem>
+                <TableItem>github.com/joshburgess</TableItem>
+              </TableRow>
+            </Table>
+          </Slide>
+
           <Slide transition={["zoom", "fade"]} bgColor="black" notes="Quick ditty on how we got here from other frameworks">
-            <Image src={images.jquery.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.knockout.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.ember.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.meteor.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Image src={images.angular.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.jquery.replace("/", "")} margin="0px auto 40px" width="300px"/>
+            <Image src={images.knockout.replace("/", "")} margin="0px auto 40px" width="300px"/>
+            <Image src={images.ember.replace("/", "")} margin="0px auto 40px" width="300px"/>
+            <Image src={images.meteor.replace("/", "")} margin="0px auto 40px" width="300px"/>
+            <Image src={images.angular.replace("/", "")} margin="0px auto 40px" width="300px"/>
             <Heading size={1} caps fit>
               Great, another JavaScript framework...
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="black" notes="The V in MVC!">
-            <Image src={images.react.replace("/", "")} margin="0px auto 40px" width="300px" />
+            <Image src={images.react.replace("/", "")} margin="0px auto 40px" width="300px"/>
             <Heading size={1} caps fit>
               ...only, this is technically not a framework.
             </Heading>
@@ -113,10 +144,10 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="tertiary">
               So, who uses React?
             </Heading>
-            <Image src={images.everyone.replace("/", "")} width="700px" />
+            <Image src={images.everyone.replace("/", "")} width="700px"/>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Image src={images.reactInProduction.replace("/", "")} width="700px" />
+            <Image src={images.reactInProduction.replace("/", "")} width="700px"/>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
@@ -141,7 +172,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
             <Heading size={1} caps fit textColor="tertiary">
-             Components can even be simple functions
+              Components can even be simple functions
             </Heading>
             <CodePane
               lang="jsx"
@@ -150,19 +181,19 @@ export default class Presentation extends React.Component {
             />
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Image src={images.vdomExample.replace("/", "")} height="500px" />
+            <Image src={images.vdomExample.replace("/", "")} height="500px"/>
             <Heading size={1} caps fit textColor="tertiary">
               Dark magic demystified
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Image src={images.tropicThunder.replace("/", "")} height="500px" />
+            <Image src={images.tropicThunder.replace("/", "")} height="500px"/>
             <Heading size={1} caps fit textColor="tertiary">
               What we expect when switching frameworks...
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Image src={images.carReplaceTire.replace("/", "")} height="500px" />
+            <Image src={images.carReplaceTire.replace("/", "")} height="500px"/>
             <Heading size={1} caps fit textColor="tertiary">
               ...but, wouldn't this be nicer?
             </Heading>
@@ -171,14 +202,14 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps fit textColor="tertiary">
               Free your front-end architecture
             </Heading>
-            <Image src={images.fluxPattern.replace("/", "")} height="500px" />
+            <Image src={images.fluxPattern.replace("/", "")} height="500px"/>
           </Slide>
 
           <Slide transition={["zoom", "fade"]}>
             <Heading size={2} caps fit textColor="tertiary">
               unleash it on all platforms
             </Heading>
-            <Image bgColor="white" src={images.reactNativeAndroidIOS.replace("/", "")} height="500px" />
+            <Image bgColor="white" src={images.reactNativeAndroidIOS.replace("/", "")} height="500px"/>
           </Slide>
 
           <Slide transition={["zoom", "fade"]}>
