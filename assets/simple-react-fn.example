@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 const SampleComponent = ({message}) => (
     <div className="hello-world">
-        {message}
+      {message}
     </div>
 );
 
