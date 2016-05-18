@@ -227,6 +227,24 @@ export default class Presentation extends React.Component {
               Dark magic demystified
             </Heading>
           </Slide>
+
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              Virtual DOM
+            </Heading>
+            <List textColor="tertiary">
+              <ListItem>React never talks to the DOM directly</ListItem>
+              <ListItem>React maintains a fast in-memory representation of the DOM</ListItem>
+              <ListItem>Components render descriptions of the DOM</ListItem>
+              <ListItem>
+                React compares this description with the in-memory representation
+                to compute the fastest way to update the browser
+              </ListItem>
+            </List>
+
+            <Cite>https://facebook.github.io/react/docs/working-with-the-browser.html</Cite>
+          </Slide>
+          
           <Slide transition={["zoom", "fade"]}>
             <Image src={images.tropicThunder.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
