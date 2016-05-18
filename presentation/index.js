@@ -148,6 +148,19 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
+              Things to consider when evaluating any new tool...
+            </Heading>
+            <List textColor="tertiary">
+              <Appear><ListItem>Commercial backing</ListItem></Appear>
+              <Appear><ListItem>Overall momentum</ListItem></Appear>
+              <Appear><ListItem>Size of community / amount of 3rd party resources</ListItem></Appear>
+              <Appear><ListItem>Learning curve</ListItem></Appear>
+              <Appear><ListItem>Performance</ListItem></Appear>
+              <Appear><ListItem>Any extra, unique bonuses</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
               So, who uses React?
             </Heading>
             <Image src={images.everyone.replace("/", "")} width="700px" />
@@ -169,8 +182,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor="tertiary">
               <Appear><ListItem>A simple mental model</ListItem></Appear>
-              <Appear><ListItem>Fast by default</ListItem></Appear>
+              <Appear><ListItem>Vanilla JS instead of HTML-based templates</ListItem></Appear>
+              <Appear><ListItem>Fast by default design</ListItem></Appear>
               <Appear><ListItem>Architecture allows for easier future transitions</ListItem></Appear>
+              <Appear><ListItem>World class developer tools = great DX</ListItem></Appear>
               <Appear><ListItem>Truly cross-platform</ListItem></Appear>
             </List>
           </Slide>
@@ -183,6 +198,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Easier to pivot if needed</ListItem></Appear>
               <Appear><ListItem>Faster feature delivery</ListItem></Appear>
               <Appear><ListItem>Community momentum and support</ListItem></Appear>
+              <Appear><ListItem>Happier & more more engaged developers</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
