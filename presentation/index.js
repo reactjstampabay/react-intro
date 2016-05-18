@@ -154,6 +154,14 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Image src={images.reactInProduction.replace("/", "")} width="700px" />
+            <Cite style={{ fontSize: 20 }}>
+              https://blog.formidable.com/using-react-is-a-business-decision-not-a-technology-choice-63c4641c5f7#.oh896hxxw
+            </Cite>
+            <Appear>
+              <Heading size={2} margin='40px auto auto auto' caps fit textColor="tertiary">
+                ...and Twitter, eBay, PayPal, The Economist, etc.
+              </Heading>
+            </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
