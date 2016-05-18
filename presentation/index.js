@@ -82,9 +82,11 @@ export default class Presentation extends React.Component {
             <Image src={images.ember.replace("/", "")} margin="0px auto 40px" width="300px" />
             <Image src={images.meteor.replace("/", "")} margin="0px auto 40px" width="300px" />
             <Image src={images.angular.replace("/", "")} margin="0px auto 40px" width="300px" />
-            <Heading size={1} caps fit>
-              Great, another JavaScript framework...
-            </Heading>
+            <Appear fid="1">
+              <Heading size={1} caps fit textColor="primary">
+                Great, another JavaScript framework...
+              </Heading>
+            </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="black" notes="The V in MVC!">
             <Image src={images.react.replace("/", "")} margin="0px auto 40px" width="300px" />
@@ -93,11 +95,9 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Appear fid="1">
-              <Heading size={2} caps fit textColor="tertiary">
-                The "V" in MVC
-              </Heading>
-            </Appear>
+            <Heading size={2} caps fit textColor="tertiary">
+              The "V" in MVC
+            </Heading>
             <Appear fid="2">
               <Heading size={2} caps fit textColor="tertiary">
                 With a thriving ecosystem
@@ -120,13 +120,24 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
-              And why should I care?
+              Why should architects and developers care?
             </Heading>
             <List textColor="tertiary">
               <Appear><ListItem>A simple mental model</ListItem></Appear>
               <Appear><ListItem>Fast by default</ListItem></Appear>
               <Appear><ListItem>Architecture allows for easier future transitions</ListItem></Appear>
               <Appear><ListItem>Truly cross-platform</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              Why should decision makers care?
+            </Heading>
+            <List textColor="tertiary">
+              <Appear><ListItem>Commercial backing</ListItem></Appear>
+              <Appear><ListItem>Easier to pivot if needed</ListItem></Appear>
+              <Appear><ListItem>Faster feature delivery</ListItem></Appear>
+              <Appear><ListItem>Community momentum and support</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
@@ -181,12 +192,13 @@ export default class Presentation extends React.Component {
             <Image bgColor="white" src={images.reactNativeAndroidIOS.replace("/", "")} height="500px" />
           </Slide>
 
-          <Slide transition={["zoom", "fade"]}>
+          <Slide transition={["zoom", "fade"]} bgColor="black">
             <BlockQuote>
-              <Quote textColor="tertiary">
+              <Quote>
                 I’d say that we’ve found React Native to be at least 5x more productive than traditional mobile development.
               </Quote>
-              <Cite><a href="http://tech.taskrabbit.com/blog/2016/03/24/react-native-android-launch/">Brian Leonard (Tasker)</a></Cite>
+              <Cite>Brian Leonard (Tasker)</Cite>
+              <Cite>http://tech.taskrabbit.com/blog/2016/03/24/react-native-android-launch</Cite>
             </BlockQuote>
           </Slide>
 
