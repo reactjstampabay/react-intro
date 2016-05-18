@@ -1,13 +1,20 @@
 {
-  "firebase": "react-intro",
-  "public": "./",
-  "ignore": [
-    "firebase.json",
-    "package.json",
-    "README.markdown",
-    "**/presentation/**",
-    "**/assets/**",
-    "**/.*",
-    "**/node_modules/**"
-  ]
+  "hosting": {
+    "public": "./",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "package.json",
+      "README.markdown",
+      "**/presentation/**",
+      "**/assets/**",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }
