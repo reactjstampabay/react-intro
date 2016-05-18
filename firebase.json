@@ -1,0 +1,13 @@
+{
+  "firebase": "react-intro",
+  "public": "./",
+  "ignore": [
+    "firebase.json",
+    "package.json",
+    "README.markdown",
+    "**/presentation/**",
+    "**/assets/**",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
-  "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "name": "react-intro",
+  "version": "1.0.0",
+  "description": "The first presentation given at ReactJS Tampa Bay",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
