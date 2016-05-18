@@ -1,4 +1,4 @@
-# Spectacle Boilerplate (ReactJS Tampa Bay)
+# Spectacle Boilerplate
 
 ## Reference
 
