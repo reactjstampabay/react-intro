@@ -139,6 +139,16 @@ export default class Presentation extends React.Component {
               margin="20px auto"
             />
           </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
+            <Heading size={1} caps fit textColor="tertiary">
+             Components can even be simple functions
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/simple-react-fn.example")}
+              margin="20px auto"
+            />
+          </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Image src={images.vdomExample.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
