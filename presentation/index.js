@@ -274,6 +274,15 @@ export default class Presentation extends React.Component {
           <Slide transition={["zoom", "fade"]} bgColor="black">
             <BlockQuote>
               <Quote>
+                React has exceeded our requirements and enabled us to build a tremendous foundation on which to innovate the Netflix experience.
+              </Quote>
+              <Cite>Jordanna Kwok (Netflix)</Cite>
+            </BlockQuote>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="black">
+            <BlockQuote>
+              <Quote>
                 I’d say that we’ve found React Native to be at least 5x more productive than traditional mobile development.
               </Quote>
               <Cite>Brian Leonard (Tasker)</Cite>
@@ -285,7 +294,7 @@ export default class Presentation extends React.Component {
               <Quote>
                 Steal shamelessly from React!
               </Quote>
-              <Cite>Adam Ernst (Author of ComponentKit for iOS)</Cite>
+              <Cite>Adam Ernst (ComponentKit)</Cite>
             </BlockQuote>
           </Slide>
 
@@ -294,7 +303,7 @@ export default class Presentation extends React.Component {
               <Quote>
                 [...] our bet paid off — we were able to ship Facebook's first fully React Native app on two platforms, with native look and feel
               </Quote>
-              <Cite>Daniel Witte & Philip von Weiterhausen (Facebook Ads Manager)</Cite>
+              <Cite>Daniel Witte & Philip von Weiterhausen (Facebook - Ads Manager)</Cite>
             </BlockQuote>
           </Slide>
         </Deck>
