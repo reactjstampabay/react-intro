@@ -81,35 +81,6 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["zoom"]} bgColor="primary">
-            <Heading fit caps lineHeight={1} textColor="white">
-              Your Starting Line Up
-            </Heading>
-
-            <Table>
-              <TableRow style={{textAlign: 'center'}}>
-                <TableHeaderItem style={{color: 'black'}}><i className="fa fa-user" aria-hidden="true"></i></TableHeaderItem>
-                <TableHeaderItem style={{color: 'black'}}><i className="fa fa-twitter" aria-hidden="true"></i></TableHeaderItem>
-                <TableHeaderItem style={{color: 'black'}}><i className="fa fa-github" aria-hidden="true"></i></TableHeaderItem>
-              </TableRow>
-              <TableRow>
-                <TableItem>Eric Nograles</TableItem>
-                <TableItem>@grales</TableItem>
-                <TableItem>github.com/ericnograles</TableItem>
-              </TableRow>
-              <TableRow>
-                <TableItem>John Hampton</TableItem>
-                <TableItem>@johnrhampton</TableItem>
-                <TableItem>github.com/johnrhampton</TableItem>
-              </TableRow>
-              <TableRow>
-                <TableItem>Josh Burgess</TableItem>
-                <TableItem>@_joshburgess </TableItem>
-                <TableItem>github.com/joshburgess</TableItem>
-              </TableRow>
-            </Table>
-          </Slide>
-
           <Slide transition={["zoom", "fade"]} bgColor="black" notes="Quick ditty on how we got here from other frameworks">
             <Image src={images.jquery.replace("/", "")} margin="0 auto 40px" width="300px" />
             <Image src={images.knockout.replace("/", "")} margin="0 auto 40px" width="300px" />
