@@ -277,6 +277,39 @@ export default class Presentation extends React.Component {
               <Cite>Daniel Witte & Philip von Weiterhausen (Facebook - Ads Manager)</Cite>
             </BlockQuote>
           </Slide>
+
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              A Competitive Edge
+            </Heading>
+            <List textColor="tertiary">
+              <Appear><ListItem>Universal coding language (really this time)</ListItem></Appear>
+              <Appear><ListItem>Cross-platform development without compromise</ListItem></Appear>
+              <Appear><ListItem>Delightful developer ergonomics</ListItem></Appear>
+              <Appear><ListItem>Ecosystem > Monolith</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              A Business Decision
+            </Heading>
+            <List textColor="tertiary">
+              <Appear><ListItem>Do more with less (really this time)</ListItem></Appear>
+              <Appear><ListItem>Avoid future risk through modular, standards-based architecture</ListItem></Appear>
+              <Appear><ListItem>Release better features faster</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="black">
+            <Heading size={1} caps fit textColor="primary">
+              One Last Thing...
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="primary">
+                https://github.com/reactjstampabay/react-intro
+              </Heading>
+            </Appear>
+          </Slide>
         </Deck>
       </Spectacle>
     );
