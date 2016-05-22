@@ -143,7 +143,7 @@ export default class Presentation extends React.Component {
             </Cite>
             <Appear>
               <Heading size={2} margin='40px auto auto auto' caps fit textColor="tertiary">
-                ...and Twitter, eBay, PayPal, The Economist, etc.
+                ...and eBay, PayPal, The Economist, etc.
               </Heading>
             </Appear>
           </Slide>
