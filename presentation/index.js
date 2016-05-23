@@ -8,19 +8,22 @@ import {
   Cite,
   CodePane,
   Deck,
-  Fill,
+  // Fill,
   Heading,
   Image,
-  Layout,
+  // Layout,
   Link,
   ListItem,
   List,
-  Markdown,
+  // Markdown,
   Quote,
   Slide,
   Spectacle,
-  Text,
-  Table, TableRow, TableItem, TableHeaderItem
+  Text
+  // Table,
+  // TableRow,
+  // TableItem,
+  // TableHeaderItem
 } from "spectacle";
 
 // Import image preloader util
@@ -42,23 +45,28 @@ const images = {
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
-  ember: require('../assets/ember-logo.png'),
-  meteor: require('../assets/meteor-logo.png'),
-  jquery: require('../assets/jquery-logo.png'),
-  angular: require('../assets/angular-logo.png'),
-  knockout: require('../assets/knockout-logo.png'),
-  durandal: require('../assets/durandal-logo.png'),
-  aurelia: require('../assets/aurelia-logo.png'),
-  backbone: require('../assets/backbone-logo.png'),
-  react: require('../assets/react-logo.png'),
-  streetFighter: require('../assets/street-fighter-destroy-car.gif'),
-  carReplaceTire: require('../assets/car-replace-tire-moving.jpg'),
-  tropicThunder: require('../assets/tropic-thunder-explosion.gif'),
-  everyone: require('../assets/everyone.gif'),
-  reactInProduction: require('../assets/react-in-production.png'),
-  fluxPattern: require('../assets/react-flux-pattern.png'),
-  vdomExample: require('../assets/react-vdom-illustrated.png'),
-  reactNativeAndroidIOS: require('../assets/react-native-android-ios.png')
+  ember: require("../assets/ember-logo.png"),
+  meteor: require("../assets/meteor-logo.png"),
+  jquery: require("../assets/jquery-logo.png"),
+  angular: require("../assets/angular-logo.png"),
+  knockout: require("../assets/knockout-logo.png"),
+  durandal: require("../assets/durandal-logo.png"),
+  aurelia: require("../assets/aurelia-logo.png"),
+  backbone: require("../assets/backbone-logo.png"),
+  react: require("../assets/react-logo.png"),
+  streetFighter: require("../assets/street-fighter-destroy-car.gif"),
+  carReplaceTire: require("../assets/car-replace-tire-moving.jpg"),
+  tropicThunder: require("../assets/tropic-thunder-explosion.gif"),
+  everyone: require("../assets/everyone.gif"),
+  reactInProduction: require("../assets/react-in-production.png"),
+  fluxPattern: require("../assets/react-flux-pattern.png"),
+  reactHotReloading: require("../assets/react-hot-reloading.gif"),
+  reactDeveloperTools: require("../assets/react-developer-tools.gif"),
+  redux: require("../assets/redux.png"),
+  reduxDevTools: require("../assets/redux-devtools.gif"),
+  reduxTimeTravelDebugging: require("../assets/redux-time-travel-debugging.gif"),
+  vdomExample: require("../assets/react-vdom-illustrated.png"),
+  reactNativeAndroidIOS: require("../assets/react-native-android-ios.png")
 };
 
 preloader(images);
@@ -119,7 +127,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
-              Things to consider when evaluating any new tool...
+              Things to consider when evaluating new tech
             </Heading>
             <List textColor="tertiary">
               <Appear><ListItem>Commercial backing</ListItem></Appear>
@@ -132,24 +140,49 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
-              So, who uses React?
+              Why should decision makers care?
             </Heading>
-            <Image src={images.everyone.replace("/", "")} width="700px" />
+            <List textColor="tertiary">
+              <Appear><ListItem>Proven in production by industry giants</ListItem></Appear>
+              {/* include hidden LIs to maintain layout spacing when returning back to this slide */}
+              <ListItem style={{ visibility: "hidden" }}>Easier to pivot if necessary</ListItem>
+              <ListItem style={{ visibility: "hidden" }}>Faster feature delivery</ListItem>
+              <ListItem style={{ visibility: "hidden" }}>Community momentum and support</ListItem>
+              <ListItem style={{ visibility: "hidden" }}>More excited & productive front-end teams</ListItem>
+            </List>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
-            <Image src={images.reactInProduction.replace("/", "")} width="700px" />
+            <Heading size={1} caps fit textColor="tertiary">
+              Who is using React in production?
+            </Heading>
+            <Image src={images.everyone.replace("/", "")} width="900px" margin="40px 0 0 0" />
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image src={images.reactInProduction.replace("/", "")} width="900px" />
             <Cite style={{ fontSize: 20 }}>
               https://blog.formidable.com/using-react-is-a-business-decision-not-a-technology-choice-63c4641c5f7#.oh896hxxw
             </Cite>
             <Appear>
-              <Heading size={2} margin='40px auto auto auto' caps fit textColor="tertiary">
+              <Heading size={2} margin="40px auto auto auto" caps fit textColor="tertiary">
                 ...and eBay, PayPal, The Economist, etc.
               </Heading>
             </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={1} caps fit textColor="tertiary">
-              Why should architects and developers care?
+              Why should decision makers care?
+            </Heading>
+            <List textColor="tertiary">
+              <ListItem>Proven in production by industry giants</ListItem>
+              <Appear><ListItem>Easier to pivot if necessary</ListItem></Appear>
+              <Appear><ListItem>Faster feature delivery</ListItem></Appear>
+              <Appear><ListItem>Community momentum and support</ListItem></Appear>
+              <Appear><ListItem>More excited & productive front-end teams</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={1} caps fit textColor="tertiary">
+              Why should engineers & architects care?
             </Heading>
             <List textColor="tertiary">
               <Appear><ListItem>A simple mental model</ListItem></Appear>
@@ -157,24 +190,12 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Fast by default design</ListItem></Appear>
               <Appear><ListItem>Architecture allows for easier future transitions</ListItem></Appear>
               <Appear><ListItem>World class developer tools = great DX</ListItem></Appear>
-              <Appear><ListItem>Truly cross-platform - “Learn once, write everywhere”</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["zoom", "fade"]}>
-            <Heading size={1} caps fit textColor="tertiary">
-              Why should decision makers care?
-            </Heading>
-            <List textColor="tertiary">
-              <Appear><ListItem>Commercial backing</ListItem></Appear>
-              <Appear><ListItem>Easier to pivot if needed</ListItem></Appear>
-              <Appear><ListItem>Faster feature delivery</ListItem></Appear>
-              <Appear><ListItem>Community momentum and support</ListItem></Appear>
-              <Appear><ListItem>Happier & more more engaged developers</ListItem></Appear>
+              <Appear><ListItem>Truly cross-platform - “Learn once, write anywhere"</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
             <Heading size={1} caps fit textColor="tertiary">
-              Simple means simple...
+              Simple means simple... (ES6 class)
             </Heading>
             <CodePane
               lang="jsx"
@@ -184,7 +205,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
             <Heading size={1} caps fit textColor="tertiary">
-             Components can even be simple functions
+             Or as a simple, pure function...
             </Heading>
             <CodePane
               lang="jsx"
@@ -215,7 +236,7 @@ export default class Presentation extends React.Component {
 
             <Cite>https://facebook.github.io/react/docs/working-with-the-browser.html</Cite>
           </Slide>
-          
+
           <Slide transition={["zoom", "fade"]}>
             <Image src={images.tropicThunder.replace("/", "")} height="500px" />
             <Heading size={1} caps fit textColor="tertiary">
@@ -230,18 +251,47 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={2} caps fit textColor="tertiary">
-              Free your front-end architecture
+              Bulletproof Architecture with Flux
             </Heading>
             <Image src={images.fluxPattern.replace("/", "")} height="500px" />
           </Slide>
-
+          <Slide transition={["zoom", "fade"]}>
+            <Heading size={2} caps fit textColor="tertiary">
+              ...or, more simply, with Redux
+            </Heading>
+            <Image src={images.redux.replace("/", "")} height="500px" />
+          </Slide>
           <Slide transition={["zoom", "fade"]}>
             <Heading size={2} caps fit textColor="tertiary">
               unleash it on all platforms
             </Heading>
             <Image bgColor="white" src={images.reactNativeAndroidIOS.replace("/", "")} height="500px" />
           </Slide>
-
+          <Slide transition={["zoom", "fade"]} bgColor="black">
+            <Heading size={1} caps textColor="tertiary">
+              Awesome
+            </Heading>
+            <Heading size={1} caps textColor="primary">
+              Developer
+            </Heading>
+            <Heading size={1} caps textColor="primary">
+              Experience
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            {/* <Image bgColor="white" src={images.reactDeveloperTools.replace("/", "")} width="667px" /> */}
+            <Image bgColor="white" src={images.reactDeveloperTools.replace("/", "")} width="1100px" margin="-140px auto 0 -90px"/>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            {/* <Image bgColor="white" src={images.reactHotReloading.replace("/", "")} width="713px" /> */}
+            <Image bgColor="white" src={images.reactHotReloading.replace("/", "")} width="1100px" margin="-140px auto 0 -90px"/>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image bgColor="white" src={images.reduxDevTools.replace("/", "")} width="776px" margin="-80px auto 0 auto"/>
+          </Slide>
+          <Slide transition={["zoom", "fade"]}>
+            <Image bgColor="white" fir src={images.reduxTimeTravelDebugging.replace("/", "")} width="784px" margin="-140px auto 0 auto"/>
+          </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="black">
             <BlockQuote>
               <Quote>
@@ -304,8 +354,18 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="primary">
               One Last Thing...
             </Heading>
+          </Slide>
+          <Slide transition={["spin", "slide"]} bgColor="black">
+            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
+              These slides were built with React
+            </Heading>
             <Appear>
-              <Heading size={1} fit textColor="primary">
+              <Heading size={1} fit textColor="primary" margin="40px 0">
+                https://github.com/formidablelabs/spectacle
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="primary" margin="40px 0">
                 https://github.com/reactjstampabay/react-intro
               </Heading>
             </Appear>

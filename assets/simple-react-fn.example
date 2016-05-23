@@ -6,6 +6,7 @@ const SampleComponent = ({message}) => (
   </div>
 );
 
+// specifying propTypes is optional & only used for validation during development
 SampleComponent.propTypes = {
   message: PropTypes.string
 };
