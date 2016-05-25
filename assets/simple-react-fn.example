@@ -1,4 +1,7 @@
-import React, {PropTypes} from 'react';
+// Transpiles to components.js via Webpack and Babel
+
+import React from 'react';
+import {render} from 'react-dom';
 
 const SampleComponent = ({message}) => (
   <div className="hello-world">
@@ -6,9 +9,7 @@ const SampleComponent = ({message}) => (
   </div>
 );
 
-// specifying propTypes is optional & only used for validation during development
-SampleComponent.propTypes = {
-  message: PropTypes.string
-};
-
-export default SampleComponent;
+render(
+  <SampleComponent message="Hello world!" />,
+  document.getElementById('app')
+);

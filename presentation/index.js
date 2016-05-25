@@ -195,11 +195,16 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
             <Heading size={1} caps fit textColor="tertiary">
-              Simple means simple... (ES6 class)
+              A Simpler Mental Model
             </Heading>
             <CodePane
               lang="jsx"
               source={require("raw!../assets/simple-react.example")}
+              margin="20px auto"
+            />
+            <CodePane
+              lang="html"
+              source={require("raw!../assets/simple-react-html.example")}
               margin="20px auto"
             />
           </Slide>
@@ -210,6 +215,11 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="jsx"
               source={require("raw!../assets/simple-react-fn.example")}
+              margin="20px auto"
+            />
+            <CodePane
+              lang="html"
+              source={require("raw!../assets/simple-react-html.example")}
               margin="20px auto"
             />
           </Slide>
@@ -347,7 +357,7 @@ export default class Presentation extends React.Component {
             <List textColor="tertiary">
               <Appear><ListItem>Do more with less (really this time)</ListItem></Appear>
               <Appear><ListItem>Avoid future risk through modular, standards-based architecture</ListItem></Appear>
-              <Appear><ListItem>Release better features faster</ListItem></Appear>
+              <Appear><ListItem>Release better features faster across many platforms</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="black">
