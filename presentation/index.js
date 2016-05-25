@@ -191,7 +191,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Fast by default design</ListItem></Appear>
               <Appear><ListItem>Architecture allows for easier future transitions</ListItem></Appear>
               <Appear><ListItem>World class developer tools = great DX</ListItem></Appear>
-              <Appear><ListItem>Truly cross-platform - “Learn once, write anywhere", not "Write once, run anywhere"</ListItem></Appear>
+              <Appear><ListItem>Truly cross-platform - “Learn once, write anywhere", not “Write once, run anywhere"</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
