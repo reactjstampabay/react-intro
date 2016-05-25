@@ -66,7 +66,8 @@ const images = {
   reduxDevTools: require("../assets/redux-devtools.gif"),
   reduxTimeTravelDebugging: require("../assets/redux-time-travel-debugging.gif"),
   vdomExample: require("../assets/react-vdom-illustrated.png"),
-  reactNativeAndroidIOS: require("../assets/react-native-android-ios.png")
+  reactNativeAndroidIOS: require("../assets/react-native-android-ios.png"),
+  chapelleReact: require('../assets/chapelle-react.png')
 };
 
 preloader(images);
@@ -379,6 +380,16 @@ export default class Presentation extends React.Component {
                 https://github.com/reactjstampabay/react-intro
               </Heading>
             </Appear>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="black">
+            <Image src={images.chapelleReact.replace("/", "")} height="400px" />
+            <Heading size={2} caps fit textColor="primary">
+              Join us Wednesday June 8, 2016 for
+            </Heading>
+            <Heading size={2} caps fit textColor="primary">
+              ReHacked
+            </Heading>
           </Slide>
         </Deck>
       </Spectacle>
